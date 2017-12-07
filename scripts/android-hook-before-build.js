@@ -3,7 +3,7 @@ module.exports = function(context) {
 	const path = require('path')
 	const Q = context.requireCordovaModule('q')
 	const deferral = new Q.defer()
-	const config_xml = path.join(context.opts.projectRoot, 'config.xml')
+	const config_xml = path.join(context.opts.projectRoot + '/platforms/android/res/xml', 'config.xml')
 	const et = context.requireCordovaModule('elementtree')
 
 	const data = fs.readFileSync(config_xml).toString()
